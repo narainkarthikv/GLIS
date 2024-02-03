@@ -1,0 +1,21 @@
+/* usercountinfo.css */
+
+.user-count-info {
+  margin: 16px;
+}
+
+.user-count-info .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-template-rows: repeat(2, 155px); /* Two rows */
+  grid-gap: 16px; /* Gap between grid items */
+}
+
+.user-count-info .grid-item {
+  border: 1px solid #000;
+  background-color: #fff; /* Background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  padding: 8px; /* Padding */
+  text-align: center; /* Center align text */
+}

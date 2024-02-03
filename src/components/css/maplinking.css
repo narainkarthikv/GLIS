@@ -1,0 +1,15 @@
+/* map-linking.css */
+
+.map-linking {
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    height: 300px; /* Adjust height as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .map-linking h2 {
+    margin-bottom: 8px;
+  }
+  

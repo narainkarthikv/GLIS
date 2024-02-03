@@ -1,0 +1,104 @@
+/* largespace.css */
+
+.large-space {
+  margin: 16px;
+  width: 720px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.large-space .slick-slider {
+  margin: 0 -16px;
+  height: 100%;
+}
+
+.large-space .slick-prev,
+.large-space .slick-next {
+  display: none;
+}
+
+.large-space .slick-dots {
+  position: absolute;
+  bottom: 16px;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
+.large-space .slick-dots li {
+  display: inline-block;
+  margin: 0 4px;
+}
+
+.large-space .slick-dots li button {
+  font-size: 12px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ddd;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.large-space .slick-dots li.slick-active button {
+  background-color: #555;
+}
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 16px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: transform 0.5s ease;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+}
+
+.slide-content:hover {
+  transform: scale(1.05);
+}
+
+.slide-content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.slide-content th,
+.slide-content td {
+  padding: 8px;
+  border: none;
+  color: #333;
+}
+
+.slide-content th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.risk-slide {
+  background-color: #ff9999;
+  color: #fff;
+}
+
+.flood-slide {
+  background-color: #66b3ff;
+  color: #fff;
+}
+
+.revenue-slide {
+  background-color: #99ff99;
+  color: #000;
+}

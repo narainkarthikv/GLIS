@@ -1,0 +1,21 @@
+/* pie-chart.css */
+
+.pie-chart-container {
+    height: 300px; /* Set a specific height for the container */
+    position: relative; /* Positioning context for absolute positioning */
+  }
+  
+  .pie-chart {
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    height: 100%; /* Fill the height of the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pie-chart h2 {
+    margin-bottom: 8px;
+  }
+  
+ 
