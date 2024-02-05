@@ -6,12 +6,12 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const data = [
-  { title: 'Item 1', description: 'Description 1', year: 1980, revenue: 5000, riskscore: 7, floodEvents: 2, elevation: 100 },
-  { title: 'Item 2', description: 'Description 2', year: 1990, revenue: 200, riskscore: 9, floodEvents: 5, elevation: 50 },
-  { title: 'Item 3', description: 'Description 3', year: 2010, revenue: 20000, riskscore: 5, floodEvents: 1, elevation: 200 },
-  { title: 'Item 4', description: 'Description 4', year: 2000, revenue: 7000, riskscore: 8, floodEvents: 3, elevation: 150 },
-  { title: 'Item 5', description: 'Description 5', year: 2001, revenue: 8000, riskscore: 1, floodEvents: 9, elevation: 100 },
-  // Add more data as needed
+  { title: 'Cuddalore', year: 1980, revenue: 5000, riskscore: 7, floodEvents: 2, elevation: 100 },
+  { title: 'Chennai', year: 1990, revenue: 200, riskscore: 9, floodEvents: 5, elevation: 50 },
+  { title: 'Erode',  year: 2010, revenue: 20000, riskscore: 5, floodEvents: 1, elevation: 200 },
+  { title: 'Karur', year: 2000, revenue: 7000, riskscore: 8, floodEvents: 3, elevation: 150 },
+  { title: 'Coimbatore', year: 2001, revenue: 8000, riskscore: 1, floodEvents: 9, elevation: 100 },
+  
 ];
 
 const LargeSpace = () => {
@@ -104,7 +104,7 @@ const LargeSpace = () => {
             <tbody>
               <tr>
                 <th>Name</th>
-                <th>Flood Events</th>
+                <th>Flood Events Occurred</th>
               </tr>
               {getTop5Areas('floodEvents')}
             </tbody>
@@ -117,7 +117,7 @@ const LargeSpace = () => {
             <tbody>
               <tr>
                 <th>Name</th>
-                <th>Revenue</th>
+                <th>Revenue Generated</th>
               </tr>
               {getTop5Areas('revenue')}
             </tbody>

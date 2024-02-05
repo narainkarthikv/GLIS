@@ -5,7 +5,7 @@
   width: 720px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  height: 300px;
+  height: 335px;
   overflow: hidden;
   position: relative;
 }
@@ -74,17 +74,19 @@
 .slide-content table {
   width: 100%;
   border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow for lifted appearance */
 }
 
 .slide-content th,
 .slide-content td {
-  padding: 8px;
+  padding: 12px; /* Increased padding for better spacing */
   border: none;
   color: #333;
 }
 
 .slide-content th {
-  background-color: #f2f2f2;
+  background-color: #4CAF50; /* Green header background color */
+  color: #fff;
   font-weight: bold;
 }
 
