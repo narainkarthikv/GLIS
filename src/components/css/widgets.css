@@ -1,21 +1,78 @@
-/* usercountinfo.css */
-
 .user-count-info {
   margin: 16px;
 }
 
-.user-count-info .grid-container {
+.grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two columns */
-  grid-template-rows: repeat(2, 155px); /* Two rows */
+  grid-template-rows: repeat(2, 150px); /* Two rows */
   grid-gap: 16px; /* Gap between grid items */
 }
 
-.user-count-info .grid-item {
-  border: 1px solid #000;
-  background-color: #fff; /* Background color */
+.grid-item {
+  /* border: 1px solid #000; */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
-  padding: 8px; /* Padding */
+  padding: 16px; /* Padding */
   text-align: center; /* Center align text */
+  overflow: hidden; /* Hide overflow */
+}
+
+/* Unique styling for each cell */
+.user-login {
+  background-color: #FFC107; /* Amber */
+  color: #000; /* Contrast color */
+}
+
+.land-data {
+  background-color: #03A9F4; /* Light Blue */
+  color: #000; /* Contrast color */
+}
+
+.zones-count {
+  background-color: #4CAF50; /* Green */
+  color: #000; /* Contrast color */
+}
+
+.area-size {
+  background-color: #E91E63; /* Pink */
+  color: #000; /* Contrast color */
+}
+
+.stylish-split {
+  display: flex;
+  justify-content: space-between; /* Adjust as needed */
+  align-items: center;
+}
+
+.stylish-left-section,
+.stylish-right-section {
+  flex-basis: 48%; /* Adjust the width as needed */
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center align text */
+}
+
+.stylish-left-section {
+  background-color: #FFC107; /* Amber */
+}
+
+.stylish-right-section {
+  background-color: #4CAF50; /* Green */
+}
+
+.stylish-left-section h3,
+.stylish-right-section h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  color: #fff; /* White text color */
+}
+
+.stylish-left-section p,
+.stylish-right-section p {
+  margin: 0;
+  font-size: 1rem;
+  color: #fff; /* White text color */
 }
