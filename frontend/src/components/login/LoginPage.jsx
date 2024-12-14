@@ -12,7 +12,7 @@ const LoginPage = ({ isAuthenticated, setIsAuthenticated }) => {
     try {
       setIsSubmitting(true);
 
-      const response = await fetch('https://glis-stats-on-view.onrender.com/api/user/login', {
+      const response = await fetch('https://glis-yqvt.onrender.com/api/user/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

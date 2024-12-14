@@ -20,9 +20,9 @@ const LargeSpace = () => {
     const fetchData = async () => {
       try {
         const [topRevenueResponse, floodRiskResponse, environmentalSafetyResponse] = await Promise.all([
-          axios.get('https://glis-stats-on-view.onrender.com/api/top-revenue'),
-          axios.get('https://glis-stats-on-view.onrender.com/api/flood-risk'),
-          axios.get('https://glis-stats-on-view.onrender.com/api/envi-safety')
+          axios.get('https://glis-yqvt.onrender.com/api/top-revenue'),
+          axios.get('https://glis-yqvt.onrender.com/api/flood-risk'),
+          axios.get('https://glis-yqvt.onrender.com/api/envi-safety')
         ]);
         setTopRevenueData(topRevenueResponse.data);
         setFloodRiskScores(floodRiskResponse.data);

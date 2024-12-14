@@ -25,7 +25,7 @@ const MarketView = () => {
 
   const fetchBusStation = async (id) => {
     try {
-      const response = await axios.get(`https://glis-stats-on-view.onrender.com/api/bus-stations/${id}`);
+      const response = await axios.get(`https://glis-yqvt.onrender.com/api/bus-stations/${id}`);
       setBusStation(response.data);
     } catch (error) {
       console.error('Error fetching bus station:', error);
@@ -34,7 +34,7 @@ const MarketView = () => {
 
   const fetchMarketData = async (id) => {
     try {
-      const response = await axios.get(`https://glis-stats-on-view.onrender.com/api/market/${id}`);
+      const response = await axios.get(`https://glis-yqvt.onrender.com/api/market/${id}`);
       setMarketData(response.data);
       if (response.data && response.data.Crops) {
         const quantities = {};
@@ -50,7 +50,7 @@ const MarketView = () => {
 
   const updateCropQuantity = async (cropId, newQuantity) => {
     try {
-      await axios.put(`https://glis-stats-on-view.onrender.com/api/market/${id}/crops/${cropId}`, { Quantity: newQuantity });
+      await axios.put(`https://glis-yqvt.onrender.com/api/market/${id}/crops/${cropId}`, { Quantity: newQuantity });
       fetchMarketData(id);
     } catch (error) {
       console.error('Error updating crop quantity:', error);
@@ -93,7 +93,7 @@ const MarketView = () => {
       Quantity: parseInt(newCropData.Quantity)
     };
   
-    axios.post(`https://glis-stats-on-view.onrender.com/api/market/${id}/crops`, crop)
+    axios.post(`https://glis-yqvt.onrender.com/api/market/${id}/crops`, crop)
       .then(res => {
         const newCropId = res.data.Crops.find(c => c.Name === newCropData.Name)._id; // Find the ID of the newly added crop
         setMarketData(res.data);
@@ -117,7 +117,7 @@ const MarketView = () => {
   };
   
   const deleteCrop = (cropId) => {
-    axios.delete(`https://glis-stats-on-view.onrender.com/api/market/${id}/crops/${cropId}`)
+    axios.delete(`https://glis-yqvt.onrender.com/api/market/${id}/crops/${cropId}`)
       .then(res => {
         console.log(res.data);
         fetchMarketData(id);

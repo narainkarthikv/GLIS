@@ -14,7 +14,7 @@ const LineChart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://glis-stats-on-view.onrender.com/api/bus-stations');
+        const response = await axios.get('https://glis-yqvt.onrender.com/api/bus-stations');
 
         setChartData({
           loading: false,

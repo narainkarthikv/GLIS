@@ -19,7 +19,7 @@ const Market = () => {
 
   const fetchMarketPlaces = async () => {
     try {
-      const response = await axios.get('https://glis-stats-on-view.onrender.com/api/bus-stations');
+      const response = await axios.get('https://glis-yqvt.onrender.com/api/bus-stations');
       const placesWithMarket = response.data;
       const filteredMarkets = placesWithMarket.filter(place => place.MarketInfrastructure === 'true');
       setMarketPlaces(filteredMarkets);
