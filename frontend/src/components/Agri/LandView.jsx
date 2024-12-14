@@ -16,7 +16,7 @@ const Landview = () => {
 
     const fetchLandData = async () => {
         try {
-            const response = await axios.get("https://glis-backend.onrender.com/api/agri/fetch");
+            const response = await axios.get("https://glis-yqvt.onrender.com/api/agri/fetch");
             setLandData(response.data);
         } catch (error) {
             setError(error.message);
@@ -28,7 +28,7 @@ const Landview = () => {
     const handleDelete = async (id) => {
         try {
             setLoading(true);
-            const response = await axios.delete(`https://glis-backend.onrender.com/api/agri/delete/${id}`);
+            const response = await axios.delete(`https://glis-yqvt.onrender.com/api/agri/delete/${id}`);
             console.log(response.data);
             fetchLandData();
         } catch (error) {

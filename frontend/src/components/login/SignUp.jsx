@@ -36,7 +36,7 @@ const SignUp = () => {
     const { confirmPassword, ...formData } = formState;
 
     try {
-      const response = await axios.post('https://glis-backend.onrender.com/api/user/add', formData);
+      const response = await axios.post('https://glis-yqvt.onrender.com/api/user/add', formData);
 
       console.log('Response from server:', response.data);
       navigate('/login'); 

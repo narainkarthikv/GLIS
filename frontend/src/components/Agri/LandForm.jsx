@@ -30,7 +30,7 @@ const LandForm = ({ onSubmit }) => {
         try {
             setIsSubmitting(true);
             // Make POST request to your backend API endpoint
-            const response = await axios.post("https://glis-backend.onrender.com/api/agri/add", formData);
+            const response = await axios.post("https://glis-yqvt.onrender.com/api/agri/add", formData);
             console.log(response.data); // Log response from the server
             setFormData({
                 ownerName: "",

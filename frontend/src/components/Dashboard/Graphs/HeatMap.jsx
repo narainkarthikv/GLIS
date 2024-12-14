@@ -11,7 +11,7 @@ const HeatmapChart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://glis-backend.onrender.com/api/bus-stations');
+        const response = await axios.get('https://glis-yqvt.onrender.com/api/bus-stations');
         const data = response.data;
         const heatmapChartData = data.map(item => ({
           x: item.PopulationDensity,

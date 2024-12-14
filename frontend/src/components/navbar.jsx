@@ -14,7 +14,7 @@ const Navbar = () => {
   //   const fetchUserRole = async () => {
 
   //     try {
-  //       const response = await axios.get('https://glis-backend.onrender.com/api/user');
+  //       const response = await axios.get('https://glis-yqvt.onrender.com/api/user');
   //       const user = response.data;
   //       console.log(user);
   //       setUserRole(user[0].role);

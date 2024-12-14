@@ -14,7 +14,7 @@ const Maplinking = () => {
   useEffect(() => {
     const fetchGeocode = async () => {
       try {
-        const response = await axios.get('https://glis-backend.onrender.com/api/bus-stations');
+        const response = await axios.get('https://glis-yqvt.onrender.com/api/bus-stations');
         const data = response.data;
         setGeocode(data);
         const types = [...new Set(data.map(geo => geo.Zone_type))];

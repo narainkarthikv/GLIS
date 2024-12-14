@@ -9,7 +9,7 @@ const BarChart = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('https://glis-backend.onrender.com/api/bus-stations')
+    axios.get('https://glis-yqvt.onrender.com/api/bus-stations')
       .then(response => {
         const newData = response.data.map(item => ({
           x: item['Name'],

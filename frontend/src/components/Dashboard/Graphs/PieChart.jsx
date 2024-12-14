@@ -11,7 +11,7 @@ const PieChart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://glis-backend.onrender.com/api/bus-stations');
+        const response = await axios.get('https://glis-yqvt.onrender.com/api/bus-stations');
         const processedData = response.data.map(item => ({
           label: item.Name,
           value: item.Size

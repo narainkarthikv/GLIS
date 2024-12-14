@@ -15,7 +15,7 @@ const TableView = () => {
 
   const fetchBusStations = async () => {
     try {
-      const response = await axios.get('https://glis-backend.onrender.com/api/bus-stations');
+      const response = await axios.get('https://glis-yqvt.onrender.com/api/bus-stations');
       setBusStations(response.data);
     } catch (error) {
       console.error('Error fetching bus stations:', error);

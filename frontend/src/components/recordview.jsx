@@ -17,7 +17,7 @@ const Recordview = () => {
 
   const fetchRecord = async (id) => {
     try {
-      const response = await axios.get(`https://glis-backend.onrender.com/api/bus-stations/${id}`);
+      const response = await axios.get(`https://glis-yqvt.onrender.com/api/bus-stations/${id}`);
       setRecord(response.data);
     } catch (error) {
       console.error(error);
