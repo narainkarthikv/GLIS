@@ -5,6 +5,7 @@ import Lottie from "lottie-react";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './css/Stats.css';
+import loadingAnimation from '../../../assets/animations/loading.json'; // Import the loading animation
 
 const LargeSpace = () => {
   const [topRevenueData, setTopRevenueData] = useState([]);
@@ -53,8 +54,7 @@ const LargeSpace = () => {
     <div className="dashboard-card">
       {loading ? (
         <div className="loading-animation" ref={loadingRef}>
-          {/* Lottie animation */}
-          <Lottie animationData={require('../../../assets/animations/loading.json')} loop autoplay />
+          <Lottie animationData={loadingAnimation} loop autoplay />
         </div>
       ) : (
         <>

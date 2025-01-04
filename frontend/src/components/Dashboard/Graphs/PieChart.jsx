@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Chart from 'react-apexcharts';
 import axios from 'axios';
 import Lottie from "lottie-react";
+import loadingAnimation from '../../../assets/animations/loading.json';
 
 const PieChart = () => {
   const [sizeData, setSizeData] = useState([]);
@@ -45,7 +46,7 @@ const PieChart = () => {
       <h2 className='graph-card-header'>Pie Chart: Size Distribution in Acres</h2>
       {loading ? (
         <div className="loading-animation">
-          <Lottie animationData={require('../../../assets/animations/loading.json')} loop autoplay />
+          <Lottie animationData={loadingAnimation} loop autoplay />
         </div>
       ) : error ? (
         <div className="error-message">{error}</div>

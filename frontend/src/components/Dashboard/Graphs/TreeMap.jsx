@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Chart from 'react-apexcharts';
 import axios from 'axios';
 import Lottie from 'lottie-react';
+import loadingAnimation from '../../../assets/animations/loading.json'; // Import the loading animation
 
 const TreemapChart = () => {
   const [data, setData] = useState([]);
@@ -54,7 +55,7 @@ const TreemapChart = () => {
     <div className="dashboard-card">
       {loading ? (
         <div className="loading-animation">
-          <Lottie animationData={require('../../../assets/animations/loading.json')} loop autoplay />
+          <Lottie animationData={loadingAnimation} loop autoplay />
         </div>
       ) : error ? (
         <div className="error-message">{error}</div>

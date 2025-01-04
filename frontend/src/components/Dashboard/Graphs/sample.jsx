@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Chart from 'react-apexcharts';
 import axios from 'axios';
 import Lottie from 'lottie-react';
+import loadingAnimation from '../../../assets/animations/loading.json'; // Import the loading animation
 
 const LineChart = () => {
 
@@ -40,7 +41,7 @@ const LineChart = () => {
     if (loading) {
       return (
         <div className="loading-animation">
-          <Lottie animationData={require('../../../assets/animations/loading.json')} loop autoplay />
+          <Lottie animationData={loadingAnimation} loop autoplay />
         </div>
       );
     }
