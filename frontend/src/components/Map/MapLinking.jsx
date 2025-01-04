@@ -7,6 +7,10 @@ import Lottie from 'lottie-react';
 import loadingAnimation from '../../assets/animations/loading.json';
 import './css/MapLinking.css';
 
+import commercialPlaceholder from '../../assets/images/commercial-placeholder.png';
+import governmentPlaceholder from '../../assets/images/government-placeholder.png';
+import parkPlaceholder from '../../assets/images/park-placeholder.png';
+
 const Maplinking = () => {
   const [geocode, setGeocode] = useState([]);
   const [zoneTypes, setZoneTypes] = useState([]);
@@ -54,17 +58,17 @@ const Maplinking = () => {
   }
 
   const CommercialIcon = new Icon({
-    iconUrl: require('../../assets/images/commercial-placeholder.png'),
+    iconUrl: commercialPlaceholder,
     iconSize: [38, 38]
   });
 
   const GovernmentIcon = new Icon({
-    iconUrl: require('../../assets/images/government-placeholder.png'),
+    iconUrl: governmentPlaceholder,
     iconSize: [38, 38]
   });
 
   const ParkIcon = new Icon({
-    iconUrl: require('../../assets/images/park-placeholder.png'),
+    iconUrl: parkPlaceholder,
     iconSize: [38, 38]
   });
 
@@ -126,15 +130,15 @@ const Maplinking = () => {
           </MapContainer>
           <div className="legend-container">
             <div className="legend-item">
-              <img className="legend-item-img" src={require('../../assets/images/government-placeholder.png')} alt="Government" />
+              <img className="legend-item-img" src={governmentPlaceholder} alt="Government" />
               <span className="legend-item-span">Government</span>
             </div>
             <div className="legend-item">
-              <img className="legend-item-img" src={require('../../assets/images/commercial-placeholder.png')} alt="Commercial" />
+              <img className="legend-item-img" src={commercialPlaceholder} alt="Commercial" />
               <span className="legend-item-span">Commercial</span>
             </div>
             <div className="legend-item">
-              <img className="legend-item-img" src={require('../../assets/images/park-placeholder.png')} alt="Park" />
+              <img className="legend-item-img" src={parkPlaceholder} alt="Park" />
               <span className="legend-item-span">Park</span>
             </div>
           </div>
