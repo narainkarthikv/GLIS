@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FaArrowRight, FaSort } from 'react-icons/fa6';
-import { Link } from 'react-router-dom'; // Import Lin
-import './css/Data.css'
+import { Link } from 'react-router-dom';
+import './css/Data.css';
 
 const TableView = () => {
   const [busStations, setBusStations] = useState([]);
@@ -22,53 +22,37 @@ const TableView = () => {
     }
   };
 
-  const handleSearch = (event) => {
-    setSearchTerm(event.target.value);
-  };
+  const handleSearch = (event) => setSearchTerm(event.target.value);
 
-  const handleSort = (event) => {
-    setSortType(event.target.value);
-  };
+  const handleSort = (event) => setSortType(event.target.value);
 
-  const filteredBusStations = busStations.filter( station => (
+  const filteredBusStations = busStations.filter(station => (
     station.Name.toLowerCase().includes(searchTerm.toLowerCase()) || 
     station.Reg.toLowerCase().includes(searchTerm.toLowerCase()) ||
     station.Zone_type.toLowerCase().includes(searchTerm.toLowerCase())
   ));
 
   const sortedBusStations = filteredBusStations.sort((a, b) => {
-    if (sortType === 'ID') {
-      return a.ID - b.ID;
-    } 
-    else if (sortType === 'Name') {
-      return a.Name.localeCompare(b.Name);
-    } 
-    else if (sortType === 'Reg') {
-      return a.Reg.localeCompare(b.Reg);
-    } 
-    else if (sortType === 'Revenue') {
-      return a.Rev - b.Rev;
-    } 
-    else if (sortType === 'Year') {
-      return a.Year - b.Year;
+    switch (sortType) {
+      case 'ID': return a.ID - b.ID;
+      case 'Name': return a.Name.localeCompare(b.Name);
+      case 'Reg': return a.Reg.localeCompare(b.Reg);
+      case 'Revenue': return a.Rev - b.Rev;
+      case 'Year': return a.Year - b.Year;
+      case 'Zone_type': return a.Zone_type.localeCompare(b.Zone_type);
+      default: return 0;
     }
-    else if (sortType === 'Zone_type') {
-      return a.Zone_type.localeCompare(b.Zone_type);
-    } 
-    return 0;
   });
 
   return (
     <div className='Data'>
       <div className='search-container'>
-
         <input
           className='search-bar'
           placeholder="🔍 Search By Name, Region, Zone Type"
           value={searchTerm}
           onChange={handleSearch}
         />
-
         <select className='sort-btn' value={sortType} onChange={handleSort}>
           <option value="ID">ID</option>
           <option value="Name">Name</option>
@@ -77,10 +61,8 @@ const TableView = () => {
           <option value="Year">Year</option>
           <option value="Zone_type">Zones</option>
         </select>
-
         <h3><FaSort className='sort-icon'/></h3>
       </div>
-  
       <table className='tableview-container'>
         <thead>
           <tr>
@@ -99,18 +81,17 @@ const TableView = () => {
             <tr className='tableview-row' key={station.ID}>
               <td className='tableview-row-data'>{station.ID}</td>
               <td className='tableview-row-data'>{station.Name}</td>
-              <td className='tableview-row-data'>{station.Local }</td>
+              <td className='tableview-row-data'>{station.Local}</td>
               <td className='tableview-row-data'>{station.Reg}</td>
               <td className='tableview-row-data'>{station.Rev}</td>
               <td className='tableview-row-data'>{station.Zone_type}</td>
               <td className='tableview-row-data'>{station.Year}</td>
-              {/* <Recordview id={station.ID} /> */}
               <td className='tableview-row-data'>
-                {/* Pass ID to Recordview component */}
-                <Link className='table-link' to={`/RecordView/${station.ID}`}><FaArrowRight className='table-arrow-icon'/></Link>
+                <Link className='table-link' to={`/RecordView/${station.ID}`}>
+                  <FaArrowRight className='table-arrow-icon'/>
+                </Link>
               </td>
             </tr>
-           
           ))}
         </tbody>
       </table>

@@ -4,6 +4,7 @@ import './css/maplinking.css';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { Icon } from "leaflet";
+import placeholder from '../../assets/images/placeholder.png';
 
 const Maplinking = () => {
   const [geocode, setGeocode] = useState([]);
@@ -37,7 +38,7 @@ const Maplinking = () => {
   }, [selectedZone, geocode]);
 
   const customIcon = new Icon({
-    iconUrl: require('../../assets/images/placeholder.png'),
+    iconUrl: placeholder,
     iconSize: [38, 38]
   });
 
