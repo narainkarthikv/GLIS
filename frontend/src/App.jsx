@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/common/Navbar.jsx';
-import Dashboard from './components/Dashboard/Dashboard.jsx';
-import TableView from './components/Data/Data.jsx';
-import Recordview from './components/Data/RecordView.jsx';
+import Dashboard from './components/dashboard/Dashboard.jsx';
+import TableView from './components/data/Data.jsx';
+import Recordview from './components/data/RecordView.jsx';
 import Login from './pages/Login.jsx';
 import SignUp from './pages/SignUp.jsx';
-import Map from './components/map/MapLinking.jsx';
+import MapLinking from './components/map/MapLinking.jsx';
 import Landview from './components/agri/LandView.jsx';
 import Landform from './components/agri/LandForm.jsx';
 import Market from './components/market/Market.jsx';
@@ -34,7 +34,7 @@ function AppRoutes({ isLoggedIn, setIsLoggedIn }) {
       <Route path='/Data' element={isLoggedIn ? <TableView /> : <Navigate to="/login" />} />
       <Route path='/Market' element={isLoggedIn ? <Market /> : <Navigate to="/login" />} />
       <Route path='/MarketView/:id' element={isLoggedIn ? <MarketView /> : <Navigate to="/login" />} />
-      <Route path='/Map' element={isLoggedIn ? <Map /> : <Navigate to="/login" />} />
+      <Route path='/Map' element={isLoggedIn ? <MapLinking /> : <Navigate to="/login" />} />
       <Route path='/RecordView/:id' element={isLoggedIn ? <Recordview /> : <Navigate to="/login" />} />
       <Route path='/Agri' element={isLoggedIn ? <Landview /> : <Navigate to="/login" />} />
       <Route path='/Agri/add' element={isLoggedIn ? <Landform /> : <Navigate to="/login" />} />
